@@ -4,18 +4,17 @@
 class TrendingManager {
     constructor() {
         this.topics = [
-            { category: 'Technology', name: '#AI2026', tweets: '12.5K', emoji: '🤖' },
-            { category: 'World News', name: '#ClimateAction', tweets: '8.2K', emoji: '🌍' },
-            { category: 'Sports', name: '#ChampionsLeague', tweets: '15.7K', emoji: '⚽' },
-            { category: 'Entertainment', name: '#NewMovies', tweets: '6.3K', emoji: '🎬' },
-            { category: 'Coding', name: '#WebDev', tweets: '9.8K', emoji: '💻' }
+            { category: 'Sports', name: '#OrlandoPiratesVideo', tweets: '12.5K' },
+            { category: 'Relenohile Mofokeng', name: '#ST union', tweets: '8.2K' },
+            { category: 'Eurropean move secured', name: '#Relebohile Mofokeng #OrlandoPirates', tweets: '15.7K' },
+            { category: 'South African Sensational', name: '#SouthAfricanMedia', tweets: '6.3K' },
+            { category: 'Thank You Pirates Legend', name: '#Diski galore', tweets: '9.8K' }
         ];
         this.init();
     }
 
     init() {
         this.render();
-        this.setupRefresh();
     }
 
     render() {
@@ -33,7 +32,7 @@ class TrendingManager {
             item.className = 'trend-item';
             item.innerHTML = `
                 <div class="trend-category">${topic.category}</div>
-                <div class="trend-name">${topic.emoji} ${topic.name}</div>
+                <div class="trend-name">${topic.name}</div>
                 <div class="trend-tweets">${topic.tweets} tweets</div>
             `;
             item.addEventListener('click', () => this.searchTopic(topic.name));
@@ -43,18 +42,18 @@ class TrendingManager {
         // Add refresh button
         const refreshBtn = document.createElement('button');
         refreshBtn.className = 'refresh-trends';
-        refreshBtn.innerHTML = '<i class="fas fa-sync-alt"></i> Refresh Trends';
+        refreshBtn.textContent = 'Refresh Trends';
         refreshBtn.addEventListener('click', () => this.refresh());
         container.appendChild(refreshBtn);
     }
 
     refresh() {
         const newTopics = [
-            { category: 'Breaking', name: '#WorldCup2026', tweets: '45.2K', emoji: '🏆' },
-            { category: 'Tech', name: '#ElonMusk', tweets: '28.9K', emoji: '🚀' },
-            { category: 'Movies', name: '#NewRelease', tweets: '18.3K', emoji: '🎥' },
-            { category: 'Science', name: '#SpaceExploration', tweets: '9.7K', emoji: '🪐' },
-            { category: 'Gaming', name: '#GameOn', tweets: '22.1K', emoji: '🎮' }
+            { category: 'Trending', name: '#OrlandoPirates', tweets: '45.2K' },
+            { category: 'Sports', name: '#RelebohileMofokeng', tweets: '28.9K' },
+            { category: 'Entertainment', name: '#JoziCreators', tweets: '18.3K' },
+            { category: 'St Union', name: '#BELGIUM', tweets: '9.7K' },
+            { category: 'World Cup', name: '#Mbokazi', tweets: '22.1K' }
         ];
         this.topics = newTopics;
         this.render();
