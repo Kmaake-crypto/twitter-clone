@@ -1,4 +1,4 @@
-# FakeTwitter Clone
+#Fake Twitter clone
 A static Twitter Timeline clone built with HTML, CSS, and JavaScript.
 #Overview
 This project recreates a Twitter-like home timeline experience, including:
